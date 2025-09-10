@@ -12,8 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ispw.progettoispw.Controller.ControllerGrafico.Alternative.RegistrazioneClienteGUIAlternativeController">
    <children>
       <Label alignment="CENTER" prefHeight="54.0" prefWidth="600.0" text="Registrazione Cliente ">
          <font>
@@ -40,13 +39,13 @@
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="449.0" text="Nome" />
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="314.0" text="Cognome" GridPane.rowIndex="1" />
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="298.0" text="Email" GridPane.rowIndex="2" />
-                  <TextField promptText="Nome" GridPane.columnIndex="1" />
-                  <TextField promptText="Cognome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="nameLabel" promptText="Nome" GridPane.columnIndex="1" />
+                  <TextField fx:id="cognomeLabel" promptText="Cognome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="emailLabel" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="314.0" text="Telefono" GridPane.rowIndex="3" />
-                  <TextField promptText="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <PasswordField promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <PasswordField promptText="Conferma Password" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="phoneLabel" promptText="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <PasswordField fx:id="passwordLabel" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <PasswordField fx:id="confirmPassword" promptText="Conferma Password" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="323.0" text="Password" GridPane.rowIndex="4" />
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="284.0" text="Conferma Password" GridPane.rowIndex="5" />
                </children>
@@ -67,12 +66,12 @@
                 <RowConstraints maxHeight="110.19998779296876" minHeight="10.0" prefHeight="79.19998779296876" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="188.0" text="Registrati" GridPane.columnIndex="1">
+                  <Button mnemonicParsing="false" onAction="#onRegister" prefHeight="43.0" prefWidth="188.0" text="Registrati" GridPane.columnIndex="1">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="154.0" text="Login" GridPane.columnIndex="3">
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLogin" prefHeight="43.0" prefWidth="154.0" text="Login" GridPane.columnIndex="3">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -83,7 +82,7 @@
       </HBox>
       <VBox prefHeight="50.0" prefWidth="600.0">
          <children>
-            <Hyperlink alignment="CENTER" prefHeight="10.0" prefWidth="600.0" text="Sei un Parrucchiere?...Registrati">
+            <Hyperlink alignment="CENTER" onAction="#onLink" prefHeight="10.0" prefWidth="600.0" text="Sei un Parrucchiere?...Registrati">
                <font>
                   <Font size="16.0" />
                </font>

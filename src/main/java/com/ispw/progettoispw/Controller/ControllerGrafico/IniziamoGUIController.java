@@ -1,4 +1,4 @@
-package com.ispw.progettoispw.ControllerGrafico;
+package com.ispw.progettoispw.Controller.ControllerGrafico;
 
 import com.ispw.progettoispw.pattern.WindowManager;
 import javafx.event.ActionEvent;
@@ -25,7 +25,7 @@ public class IniziamoGUIController {
     }
 
     public void prenotazioneButtonOnAction (ActionEvent event){
-        try{  WindowManager.getInstance().switchScene("ItuoiDatiView.fxml", "Inserisci i tuoi Dati per la Prenotazione");
+        try{  WindowManager.getInstance().switchScene("RegistrationView.fxml", "Registrati");
     } catch (IOException e) {
         throw new RuntimeException(e);
     }

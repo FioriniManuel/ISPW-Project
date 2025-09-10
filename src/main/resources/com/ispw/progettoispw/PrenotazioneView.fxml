@@ -1,14 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ispw.progettoispw.Controller.ControllerGrafico.PrenotazioneGUIController">
+    <children>
+        <VBox>
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="702.0" text="Il Nostro Listino" textAlignment="CENTER">
+                    <font>
+                        <Font name="Calibri Bold" size="45.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="650.0" text="Prenota" textFill="#030303">
+                    <font>
+                        <Font name="Calibri" size="20.0" />
+                    </font>
+                </Label>
+                <Pane prefHeight="16.0" prefWidth="484.0" />
+                <HBox prefHeight="322.0" prefWidth="702.0">
+                    <children>
+                        <Pane prefHeight="305.0" prefWidth="110.0" />
+                        <VBox prefHeight="275.0" prefWidth="366.0">
+                            <children>
+                                <TabPane prefHeight="306.0" prefWidth="647.0" tabClosingPolicy="UNAVAILABLE">
+                                    <tabs>
+                                        <Tab text="Uomo">
+                                            <content>
+                                                <VBox alignment="TOP_CENTER" prefHeight="253.0" prefWidth="390.0" style="-fx-background-color: e3e3e3;">
+                                                    <children>
+                                                        <Label text="Taglio &amp; Styling">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton mnemonicParsing="false" text="Taglio   [15 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Taglio + Shampoo  [18 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Taglio + Shampoo + Styling  [20 euro]" />
+                                                        <Label text="Barba">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton mnemonicParsing="false" text="Regolazione Barba [8 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Modellatura Barba  [13 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Barba Sagomata + Panno Caldo [15 euro]" />
+                                                        <Label text="Trattamenti">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton mnemonicParsing="false" text="Trattamento anticaduta/ antiforfora   [15 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Colore  [20 euro]" />
+                                                        <Label text="Pacchetti Combinati">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton mnemonicParsing="false" text="Taglio + Barba   [25 euro]   " />
+                                                        <RadioButton mnemonicParsing="false" text="Taglio + Barba + Shampoo  [28 euro]" />
+                                                    </children>
+                                                </VBox>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Donna">
+                                            <content>
+                                                <VBox alignment="TOP_CENTER" prefHeight="117.0" prefWidth="294.0" style="-fx-background-color: e3e3e3;">
+                                                    <children>
+                                                        <Label text="Taglio &amp; Piega">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton mnemonicParsing="false" text="Piega   [20 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Taglio [20 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Taglio + Piega  [30 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Frangia  [10 euro]" />
+                                                        <Label text="Colore">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton mnemonicParsing="false" text="Colore Ricrescita   [30 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Colpi di Sole [50 euro]" />
+                                                        <Label text="Trattamenti">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton mnemonicParsing="false" text="Trattamento Anticrespo alla Cheratina  [25 euro] " />
+                                                        <RadioButton mnemonicParsing="false" text="Maschera Nutriente  [10 euro]" />
+                                                        <Label text="Occasioni Speciali">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton mnemonicParsing="false" text="Raccolto da Cerimonia   [45 euro]" />
+                                                        <RadioButton mnemonicParsing="false" text="Acconciatura Sposa (prova inclusa)    [150 euro]" />
+                                                    </children>
+                                                </VBox>
+                                            </content>
+                                        </Tab>
+                                    </tabs></TabPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="44.0" prefWidth="648.0">
+                    <children>
+                        <Pane prefHeight="100.0" prefWidth="131.0" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="98.0" prefWidth="648.0">
+                    <children>
+                        <Pane prefHeight="82.0" prefWidth="153.0" />
+                        <Button mnemonicParsing="false" onAction="#homeButtonOnAction" prefHeight="46.0" prefWidth="116.0" style="-fx-background-color: #f44336;" text="Indietro" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Button>
+                        <Pane prefHeight="82.0" prefWidth="53.0" />
+                        <Button mnemonicParsing="false" onAction="#continuaButtonOnAction" prefHeight="46.0" prefWidth="116.0" style="-fx-background-color: #4caf50;" text="Continua" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</StackPane>

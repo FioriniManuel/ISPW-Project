@@ -1,14 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ispw.progettoispw.Controller.ControllerGrafico.Alternative.FidelityCardGUIAlternativeController"
+      prefWidth="600.0" prefHeight="400.0" minWidth="-Infinity" minHeight="-Infinity"
+      maxWidth="-Infinity" maxHeight="-Infinity">
 
-</AnchorPane>
+    <!-- Titolo -->
+    <children>
+        <Label alignment="CENTER" prefWidth="600.0" prefHeight="57.0" text="FidelityCard">
+            <font><Font size="30.0"/></font>
+        </Label>
+
+        <!-- Riga: Punti rimasti -->
+        <GridPane hgap="10" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints prefWidth="84.0" maxWidth="112.0" minWidth="4.8"/>
+                <ColumnConstraints prefWidth="276.0" hgrow="SOMETIMES" maxWidth="309.6" minWidth="10.0"/>
+                <ColumnConstraints prefWidth="239.6" hgrow="SOMETIMES" maxWidth="239.6" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0"/>
+            </rowConstraints>
+
+            <children>
+                <Label alignment="CENTER" text="Punti Rimasti:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font><Font size="18.0"/></font>
+                </Label>
+                <Label fx:id="puntiRimastiLabel" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <font><Font size="18.0"/></font>
+                </Label>
+            </children>
+        </GridPane>
+
+        <Separator prefWidth="600.0"/>
+
+        <!-- Tabella premi (3 righe) -->
+        <GridPane hgap="12" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="72.2"  hgrow="SOMETIMES" maxWidth="194.4" minWidth="10.0"/>
+                <ColumnConstraints prefWidth="121.2" hgrow="SOMETIMES" maxWidth="345.6" minWidth="10.0"/>
+                <ColumnConstraints prefWidth="159.0" hgrow="SOMETIMES" maxWidth="425.2" minWidth="10.0"/>
+                <ColumnConstraints prefWidth="265.4" hgrow="SOMETIMES" maxWidth="425.2" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0"/>
+            </rowConstraints>
+
+            <children>
+                <!-- Intestazioni -->
+                <Label alignment="CENTER" text=" " GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label alignment="CENTER" text="Punti Necessari" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <Label alignment="CENTER" text="Premio" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                <!-- Riga 1 -->
+                <Button fx:id="redeemBtn1" text="Ritira Premio" onAction="#onRedeemP1"
+                        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label  fx:id="puntiNec1Label" alignment="CENTER" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <Label  fx:id="premio1Label"   alignment="CENTER" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                <!-- Riga 2 -->
+                <Button fx:id="redeemBtn2" text="Ritira Premio" onAction="#onRedeemP2"
+                        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Label  fx:id="puntiNec2Label" alignment="CENTER" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <Label  fx:id="premio2Label"   alignment="CENTER" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+                <!-- Riga 3 -->
+                <Button fx:id="redeemBtn3" text="Ritira Premio" onAction="#onRedeemP3"
+                        GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Label  fx:id="puntiNec3Label" alignment="CENTER" text="-" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                <Label  fx:id="premio3Label"   alignment="CENTER" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+            </children>
+        </GridPane>
+
+        <Separator prefWidth="600.0"/>
+
+        <!-- Footer: Indietro / Home -->
+        <Pane prefWidth="600.0" prefHeight="87.0">
+            <children>
+                <Button fx:id="backButton" text="Indietro" onAction="#onBack"
+                        layoutX="117.0" layoutY="23.0" prefWidth="120.0" prefHeight="45.0">
+                    <font><Font size="20.0"/></font>
+                </Button>
+                <Button fx:id="homeButton" text="Home" onAction="#onHome"
+                        layoutX="318.0" layoutY="24.0" prefWidth="133.0" prefHeight="43.0">
+                    <font><Font size="20.0"/></font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</VBox>

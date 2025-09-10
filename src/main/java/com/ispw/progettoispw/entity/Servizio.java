@@ -1,4 +1,4 @@
-package com.ispw.progettoispw.model.entity;
+package com.ispw.progettoispw.entity;
 
 import com.ispw.progettoispw.Enum.GenderCategory;
 
@@ -54,5 +54,17 @@ public class Servizio {
     }
     public String servizioPrezzo(){
         return name + "-" + getFormattedPrice();
+    }
+
+    public void setServiceId(String id) {
+        this.serviceId=id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 }

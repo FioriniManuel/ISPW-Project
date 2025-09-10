@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<Pane prefHeight="528.0" prefWidth="680.0" style="-fx-background-color: e3e3e3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ispw.progettoispw.Controller.ControllerGrafico.Alternative.HomeBarbiereGUIAlternativeController">
+    <children>
+        <Label alignment="CENTER" layoutX="-9.0" prefHeight="35.0" prefWidth="693.0" text="Centro di Gestione Zac Zac">
+            <font><Font size="24.0" /></font>
+        </Label>
+        <Label layoutX="118.0" layoutY="45.0" text="Benvenuto">
+            <font><Font size="20.0" /></font>
+        </Label>
 
-</AnchorPane>
+        <Label fx:id="nomeBarbiere" layoutX="450.0" layoutY="45.0" text="Nome Barbiere">
+            <font><Font size="20.0" /></font>
+        </Label>
+
+        <Button fx:id="btnEsci" layoutX="69.0" layoutY="467.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" text="Esci">
+            <font><Font size="20.0" /></font>
+        </Button>
+        <Separator layoutX="-9.0" layoutY="86.0" prefHeight="5.0" prefWidth="693.0" />
+        <Button layoutX="326.0" layoutY="468.0" mnemonicParsing="false" onAction="#notImplementedOnAction" prefHeight="23.0" prefWidth="318.0" text="FidelityCard (Not Implemented)">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+      <ScrollPane layoutX="-3.0" layoutY="99.0" prefHeight="298.0" prefWidth="680.0">
+         <content>
+            <VBox prefHeight="283.0" prefWidth="679.0">
+               <children>
+                  <ListView fx:id="appointmentsList" prefHeight="300.0" prefWidth="679.0" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="dateTextField" layoutX="307.0" layoutY="419.0" prefHeight="25.0" prefWidth="281.0" />
+      <Label layoutX="93.0" layoutY="421.0" text="Visualizza le Prenotazioni del:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

@@ -1,14 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<StackPane fx:id="root" prefHeight="520" prefWidth="700" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ispw.progettoispw.Controller.ControllerGrafico.RiepilogoGUIController">
 
-</AnchorPane>
+    <VBox alignment="TOP_CENTER" prefWidth="680" spacing="16" style="-fx-background-color: e3e3e3;">
+        <children>
+
+            <Label style="-fx-font-weight: bold;" text="Riepilogo Prenotazione">
+                <font>
+                    <Font name="Calibri" size="36" />
+                </font>
+            </Label>
+
+            <GridPane gridLinesVisible="true" hgap="12" maxWidth="600" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" prefWidth="180" />
+                    <ColumnConstraints halignment="LEFT" prefWidth="420" />
+                </columnConstraints>
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+
+                <!-- Cliente -->
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="187.0" text="Cliente" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+                <Label fx:id="clienteLabel" alignment="CENTER" prefHeight="18.0" prefWidth="476.0" text="Manuel Fiorini" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+
+                <!-- Barbiere -->
+                <Label alignment="CENTER" prefHeight="30.0" prefWidth="174.0" text="Professionista" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+                <Label fx:id="barbiereLabel" alignment="CENTER" prefHeight="30.0" prefWidth="412.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+
+                <!-- Data -->
+                <Label alignment="CENTER" prefHeight="30.0" prefWidth="174.0" text="Data" GridPane.columnIndex="0" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+                <Label fx:id="dataLabel" alignment="CENTER" prefHeight="18.0" prefWidth="550.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+
+                <!-- Orario -->
+                <Label alignment="CENTER" prefHeight="30.0" prefWidth="189.0" text="Orario" GridPane.columnIndex="0" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+                <Label fx:id="orarioLabel" alignment="CENTER" prefHeight="18.0" prefWidth="424.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+
+                <!-- Servizio -->
+                <Label alignment="CENTER" prefHeight="30.0" prefWidth="192.0" text="Servizio" GridPane.columnIndex="0" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+                <Label fx:id="servizioLabel" alignment="CENTER" prefHeight="18.0" prefWidth="587.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+
+                <!-- Prezzo -->
+                <Label alignment="CENTER" prefHeight="30.0" prefWidth="226.0" text="Prezzo" GridPane.columnIndex="0" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+                <Label fx:id="prezzoLabel" alignment="CENTER" prefHeight="18.0" prefWidth="494.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+            <Separator prefWidth="600" />
+
+            <!-- Pagamento -->
+            <VBox maxWidth="600" spacing="8">
+                <children>
+                    <Label style="-fx-font-weight: bold;" text="Modalità di pagamento">
+                        <font><Font name="Calibri" size="24.0" /></font>
+                    </Label>
+                    <HBox spacing="16">
+                        <!-- NB: ToggleGroup agganciato al campo paymentGroup del controller -->
+                        <RadioButton fx:id="payInShopRadio" text="In sede">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="paymentGroup" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="16.0" />
+                     </font></RadioButton>
+                        <RadioButton fx:id="payInAppRadio" text="In app" toggleGroup="$paymentGroup">
+                     <font>
+                        <Font size="16.0" />
+                     </font></RadioButton>
+                    </HBox>
+                </children>
+            </VBox>
+
+            <HBox alignment="CENTER" spacing="20">
+                <Button fx:id="indietroButton" onAction="#onIndietro" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 8 18;" text="Indietro">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+                <Button fx:id="confermaButton" alignment="CENTER_RIGHT" onAction="#onConferma" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-padding: 8 18;" text="Conferma">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            </HBox>
+
+        </children>
+    </VBox>
+</StackPane>

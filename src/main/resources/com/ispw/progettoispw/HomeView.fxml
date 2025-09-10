@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ispw.progettoispw.Controller.ControllerGrafico.HomeGUIController">
+    <children>
+        <Label layoutX="19.0" layoutY="67.0" text="Prenota subito e dai un taglio all' attesa!">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="welcomeLabel" layoutX="19.0" layoutY="37.0" prefHeight="35.0" prefWidth="267.0" text="Manuel Fiorini">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="exitButton" layoutX="389.0" layoutY="63.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #ff0b0b;" text="Esci" textFill="WHITE">
+            <rotationAxis>
+                <Point3D z="-19.0" />
+            </rotationAxis>
+         <font>
+            <Font size="15.0" />
+         </font>
+        </Button>
+        <Pane layoutY="103.0" prefHeight="342.0" prefWidth="602.0" style="-fx-background-color: e3e3e3;">
+            <children>
+                <Button fx:id="prenotaAppuntamentoButton" layoutX="28.0" layoutY="60.0" mnemonicParsing="false" onAction="#prenotaAppuntamentoButtonOnAction" prefHeight="51.0" prefWidth="316.0" style="-fx-background-color: #37abd9;" text="Prenota un Appuntamento" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="fidelityCardButton" layoutX="273.0" layoutY="148.0" mnemonicParsing="false" onAction="#fidelityCardOnAction" prefHeight="58.0" prefWidth="316.0" style="-fx-background-color: #37abd9;" text="FidelityCard Zac Zac" textFill="WHITE">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="leTuePrenotazioniButton" layoutX="28.0" layoutY="246.0" mnemonicParsing="false" onAction="#leTuePrenotazioniButtonOnAction" prefHeight="51.0" prefWidth="316.0" style="-fx-background-color: #37abd9;" text="Le tue Prenotazioni" textFill="WHITE">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+      <Label layoutX="19.0" layoutY="15.0" text="Benvenuto su Zac Zac,">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+    </children>
+    <effect>
+        <ColorAdjust />
+    </effect>
 </AnchorPane>

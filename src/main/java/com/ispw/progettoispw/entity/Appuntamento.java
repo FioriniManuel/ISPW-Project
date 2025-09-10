@@ -1,4 +1,4 @@
-package com.ispw.progettoispw.model.entity;
+package com.ispw.progettoispw.entity;
 
 import com.ispw.progettoispw.Enum.AppointmentStatus;
 import com.ispw.progettoispw.Enum.CouponStatus;
@@ -105,9 +105,14 @@ public class Appuntamento {
 
     public BigDecimal getDiscountAmount() { return discountAmount; }
     public BigDecimal getTotal() { return total; }
-
+    public void setInsede() { this.paymentChannel = PaymentChannel.IN_SHOP; }
+    public void setOnline() { this.paymentChannel = PaymentChannel.ONLINE; }
     public String getAppliedCouponId() { return appliedCouponId; }
     public String getAppliedCouponCode() { return appliedCouponCode; }
+
+    public void setAppliedCouponCode(String appliedCouponCode) {
+        this.appliedCouponCode = appliedCouponCode;
+    }
 
     public Integer getLoyaltyPointsEarned() { return loyaltyPointsEarned; }
 

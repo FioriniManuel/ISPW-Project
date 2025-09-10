@@ -1,4 +1,4 @@
-package com.ispw.progettoispw.model.entity;
+package com.ispw.progettoispw.entity;
 
 import com.ispw.progettoispw.Enum.GenderCategory;
 import com.ispw.progettoispw.Enum.Role;

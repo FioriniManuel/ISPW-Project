@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.ispw.progettoispw.ListaPrenotazioniView1"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox prefHeight="653.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ispw.progettoispw.Controller.ControllerGrafico.PrenotazioniTabGUIController">
+    <children>
+        <Pane prefHeight="155.0" prefWidth="600.0" style="-fx-background-color: e3e3e3;">
+            <children>
+                <Label layoutX="36.0" layoutY="73.0" text="Prenotazioni del:">
+                    <font><Font size="30.0" /></font>
+                </Label>
+                <Label fx:id="dateLabel" layoutX="263.0" layoutY="67.0" prefHeight="58.0" prefWidth="193.0" text="">
+                    <font><Font size="40.0" /></font>
+                </Label>
+                <Label layoutX="42.0" layoutY="29.0" text="Quale Data Vuoi Vedere?">
+                    <font><Font size="18.0" /></font>
+                </Label>
+                <DatePicker fx:id="datePicker" layoutX="268.0" layoutY="28.0" />
+            <Button layoutX="481.0" layoutY="67.0" mnemonicParsing="false" onAction="#indietroButtonOnAction" style="-fx-background-color: #ff0b0b;" text="Indietro" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+        <ScrollPane prefHeight="500.0" prefWidth="600.0">
+            <content>
+                <VBox prefHeight="498.0" prefWidth="598.0">
+                    <children>
+                        <ListView fx:id="appointmentsList" prefHeight="554.0" prefWidth="598.0" />
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>

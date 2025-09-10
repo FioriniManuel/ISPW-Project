@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<Pane prefHeight="268.0" prefWidth="600.0" style="-fx-background-color: e3e3e3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ispw.progettoispw.Controller.ControllerGrafico.HomeBarbiereGUIController">
+    <children>
+        <Label alignment="CENTER" layoutX="-9.0" prefHeight="17.0" prefWidth="607.0" text="Centro di Gestione Zac Zac">
+            <font><Font size="24.0" /></font>
+        </Label>
+        <Label layoutX="33.0" layoutY="45.0" text="Benvenuto">
+            <font><Font size="20.0" /></font>
+        </Label>
 
-</AnchorPane>
+        <Label fx:id="nomeBarbiere" layoutX="144.0" layoutY="45.0" text="Nome Barbiere">
+            <font><Font size="20.0" /></font>
+        </Label>
+
+        <Button fx:id="btnEsci" layoutX="444.0" layoutY="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #ff0b0b;" text="Esci" textFill="WHITE">
+            <font><Font size="14.0" /></font>
+        </Button>
+      <Separator layoutX="-9.0" layoutY="88.0" prefHeight="1.0" prefWidth="607.0" />
+      <Button layoutX="54.0" layoutY="135.0" mnemonicParsing="false" onAction="#listaPrenotazioniOnAction" prefHeight="51.0" prefWidth="189.0" style="-fx-background-color: #37abd9;" text="Lista Prenotazioni" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="277.0" layoutY="139.0" mnemonicParsing="false" onAction="#notImplementedOnAction" prefHeight="35.0" prefWidth="310.0" text="FidelityCard (Not Implemented)">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+    </children>
+</Pane>
