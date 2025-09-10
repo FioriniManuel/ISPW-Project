@@ -1,0 +1,22 @@
+[
+  {
+    "specializzazione": "DONNA",
+    "active": true,
+    "email": "giovanni@gmail.com",
+    "nome": "Giovanni",
+    "cognome": "Bracaglia",
+    "numerodiTelefono": "3772007972",
+    "password": "manuel03",
+    "id": "d299297d-a482-451c-8c84-562270fc2d15"
+  },
+  {
+    "specializzazione": "UOMO",
+    "active": true,
+    "email": "ire@gmail.com",
+    "nome": "irene",
+    "cognome": "Sarandrea",
+    "numerodiTelefono": "3243243245",
+    "password": "manuel03",
+    "id": "bc64aa76-3964-41cc-afd2-ffe6f8ae437b"
+  }
+]

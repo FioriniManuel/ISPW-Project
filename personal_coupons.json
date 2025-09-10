@@ -1,0 +1,26 @@
+[
+  {
+    "CouponId": "d54099d2-f76f-44d3-bde3-46fef24a3b75",
+    "ClientId": "5d25e22d-1442-45d0-ad55-7b1e4910de36",
+    "Code": "REWARD-F235EC96",
+    "value": 5.00,
+    "status": "ACTIVE",
+    "note": "Premio fidelity: Sconto Bronze"
+  },
+  {
+    "CouponId": "1d95c19e-c02e-4e85-b5c2-4155a94828b2",
+    "ClientId": "5d25e22d-1442-45d0-ad55-7b1e4910de36",
+    "Code": "REWARD-BE34C858",
+    "value": 12.00,
+    "status": "USED",
+    "note": "Premio fidelity: Sconto Silver"
+  },
+  {
+    "CouponId": "5a2dbf28-5c30-4e57-9e9e-acadf114c108",
+    "ClientId": "5d25e22d-1442-45d0-ad55-7b1e4910de36",
+    "Code": "REWARD-4DAF86C5",
+    "value": 5.00,
+    "status": "ACTIVE",
+    "note": "Premio fidelity: Sconto Bronze"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "P1",
+    "name": "Sconto Bronze",
+    "requiredPoints": 10,
+    "couponValue": 5.00
+  },
+  {
+    "id": "P2",
+    "name": "Sconto Silver",
+    "requiredPoints": 20,
+    "couponValue": 12.00
+  },
+  {
+    "id": "P3",
+    "name": "Sconto Gold",
+    "requiredPoints": 30,
+    "couponValue": 20.00
+  }
+]
